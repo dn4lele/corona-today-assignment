@@ -31,7 +31,7 @@ router.get("/coronatoday",async(req,res)=>{
 
     let firstTen = uniqueStates.slice(0, 10);
 
-    const newData = firstTen.map(item => ({state: item.state ,death: item.death  }));
+    const newData = firstTen.map(item => ({date:item.date , state: item.state ,death: item.death  }));
 
 
     //same thing but with posivite
@@ -50,7 +50,7 @@ router.get("/coronatoday",async(req,res)=>{
 
     let firstTenPositiveStates = uniquePositiveStates.slice(0, 10);
 
-    const newPositiveData = firstTenPositiveStates.map(item => ({state: item.state, positive: item.positive}));
+    const newPositiveData = firstTenPositiveStates.map(item => ({ date:item.date , state: item.state, positive: item.positive}));
 
     
     //return messege
